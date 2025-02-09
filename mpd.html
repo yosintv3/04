@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  
 <head>
   <meta charset="UTF-8">
   <title>YoSinTV MPD Player</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//content.jwplatform.com/libraries/SAHhwvZq.js"></script>
- <!-- https://yosintv2.github.io/tv/mpd.js -->
   <style>
     body {
       margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #000;
     }
 
     .jwplayer {
-      position: absolute !important;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
     }
 
-    .jwplayer.jw-flag-aspect-mode {
-      min-height: 100%;
-      max-height: 100%;
+    .ad-slot {
+      width: 100%;
+      max-width: 800px;
+      height: 90px;
+      background-color: #f1f1f1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .ad-slot {
+        height: 50px;
+      }
     }
   </style>
 </head>
 
+<body>
 
-<center>
+	  <div class="ad-slot">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
      crossorigin="anonymous"></script>
 <!-- Ressponsive -->
@@ -38,14 +58,11 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center>
-
+</script>  
+         </div>
 
 	
-<body>	
-	
-<div id="jwplayerDiv"></div>
+  <div id="jwplayerDiv"></div>
   <script type="text/javascript">
     function getQueryParams() {
       const params = new URLSearchParams(window.location.search);
@@ -63,7 +80,6 @@
         file: file,
         position: 'bottom',
         autostart: true,
-        stretching: "",
         width: "100%",
         type: "dash",
         drm: {
@@ -75,11 +91,9 @@
       });
     });
   </script>
-	
-</body>
 
-	
-<center>
+
+	  <div class="ad-slot">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5525538810839147"
      crossorigin="anonymous"></script>
 <!-- Ressponsive -->
@@ -91,8 +105,11 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</center>
+</script>  
+         </div>
 
 	
+</body>
+
+
 </html>
